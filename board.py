@@ -10,7 +10,8 @@ from players import Players
 class XOBoard:
     def __init__(self):
         self.root = Tk()
-        self.label = Label(self.root, text='How big board should be?:\t Small, Medium, Big')
+        self.root.title('Tic Tac Toe')
+        self.label = Label(self.root, text='How big board should be?\t\nSmall | Medium | Big')
         self.label.grid(row=0, column=0)
         self.entry = Entry(self.root)
         self.entry.grid(row=1, column=0)
@@ -101,12 +102,13 @@ class XOBoard:
         """Generate board"""
         self.__board_size()
         root = Tk()
+        root.title('Tic Tac Toe')
 
         button_text = StringVar()
         label_text = StringVar()
         label_text.set(str(self.player_value[0]))
 
-        label = Label(root, text='Tic Tac Toe')
+        label = Label(root, text='Your turn:')
         label.grid(row=0, column=0)
 
         id_label = Label(root, text='Player:\t' + label_text.get())

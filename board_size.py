@@ -3,9 +3,10 @@ from tkinter import Tk, Label, Button
 
 def victor_screen(player):
         root = Tk()
+        root.title('Victory!')
         label = Label(root, text='Player: ' + str(player) + ' Won')
         label.pack()
-        button_ok = Button(root, text='Ok', command=lambda: [root.destroy()])
+        button_ok = Button(root, text='Ok', command=lambda: [root.destroy(), quit()])
         button_ok.pack()
         root.mainloop()
 
